@@ -24,7 +24,7 @@ export function GithubTable({ scrollRef }: Props) {
   });
 
   if (commits.length === 0) {
-    return <span>Loading...</span>;
+    return <div role="progressbar">Loading...</div>;
   }
 
   if (!author || !repo) {

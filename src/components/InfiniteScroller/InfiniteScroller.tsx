@@ -50,7 +50,7 @@ function useFetchNextOnScroll(
 
 interface Props<Item> {
   readonly items: Item[];
-  renderer: (item: Item) => JSX.Element;
+  readonly renderer: (item: Item) => JSX.Element;
   readonly scrollRef: React.MutableRefObject<HTMLDivElement | null>;
   readonly fetchNext: () => void;
 }

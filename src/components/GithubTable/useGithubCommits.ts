@@ -78,6 +78,15 @@ export function useGithubCommits({
       try {
         const response = await fetchGithubCommits(author, repo, page);
 
+        const data: GithubCommit[] | NotFound = await response.json();
+
+        // documentation_url appears when repo is not found.
+        // if this is the case, we need to redirect user
+        if ("documentation_url" in data) {
+          navigate("/does/not/exist?isInvalidRepo=true");
+          return;
+        }
+
         const link: null | string = response.headers.get("link");
 
         if (link) {
@@ -107,15 +116,6 @@ export function useGithubCommits({
           }
         }
 
-        const data: GithubCommit[] | NotFound = await response.json();
-
-        // documentation_url appears when repo is not found.
-        // if this is the case, we need to redirect user
-        if ("documentation_url" in data) {
-          navigate("/does/not/exist?isInvalidRepo=true");
-          return;
-        }
-
         setCommitMap((prevMap) => {
           const previousCommits = prevMap[repoKey] || [];
 
@@ -127,6 +127,7 @@ export function useGithubCommits({
         isFetching.current = false;
       } catch (error) {
         console.log("failed to fetch", error);
+        navigate("/does/not/exist?isInvalidRepo=true");
       }
     },
     [navigate, repoKey]

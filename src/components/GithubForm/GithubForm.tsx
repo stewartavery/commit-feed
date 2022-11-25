@@ -30,6 +30,7 @@ export function GithubForm() {
       e.preventDefault();
 
       if (!author || !repo) {
+        // TODO: re-validate on blur
         setError("Make sure to fill in both fields!");
 
         /**

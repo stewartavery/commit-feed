@@ -6,6 +6,7 @@ interface Props {
 
 export function GithubTableRow({ commit }: Props): JSX.Element {
   const localDate = new Date(commit.commit.author.date).toLocaleString();
+
   return (
     <tr>
       <td className="date-cell">{localDate}</td>
