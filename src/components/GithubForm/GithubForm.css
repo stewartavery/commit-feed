@@ -1,0 +1,36 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-self: center;
+}
+
+.form-row {
+  display: flex;
+  width: 18.75rem;
+}
+
+.form-label {
+  flex: 1;
+}
+
+.form-error {
+  color: red;
+  font-weight: bold;
+}
+
+.form-input {
+  align-self: flex-end;
+}
+
+.form-button {
+  color: white;
+  background-color: #3d97de;
+  padding: 0.625rem;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.67rem;
+}

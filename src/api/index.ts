@@ -1,0 +1,1 @@
+export { fetchGithubCommits } from "./fetchGithubCommits";

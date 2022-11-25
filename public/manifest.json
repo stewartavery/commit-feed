@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Commit Feed",
+  "name": "Commit Feed - View Github Repo Commits",
   "icons": [
     {
       "src": "favicon.ico",
