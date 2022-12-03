@@ -126,7 +126,7 @@ export function useGithubCommits({
         });
         isFetching.current = false;
       } catch (error) {
-        console.log("failed to fetch", error);
+        console.error("failed to fetch", error);
         navigate("/does/not/exist?isInvalidRepo=true");
       }
     },

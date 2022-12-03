@@ -30,14 +30,13 @@ function getSecondaryCommits() {
 describe("Integration tests for commit-feed", () => {
   beforeEach(() => {
     // @ts-ignore
-    global.fetch = jest.fn((url) =>
+    global.fetch = jest.fn(() =>
       Promise.resolve({
         // @ts-ignore
         headers: {
           get: jest.fn(() => ""),
         },
         json: () => {
-          console.log({ url });
           return Promise.resolve([]);
         },
       })
@@ -133,7 +132,7 @@ describe("Integration tests for commit-feed", () => {
           if (url.includes("page=1")) {
             return Promise.resolve(getPrimaryCommits());
           }
-          // Note: tried to get pagination to work, but couldn't
+          // Note: I tried to get pagination to work, but couldn't
           // get scroll events to cooperate
           return Promise.resolve(getSecondaryCommits());
         },

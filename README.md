@@ -7,6 +7,7 @@ This project was created in response to a take home assignment from [Chronospher
 1. Follow the steps [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to create a Github personal access token.
 1. Create a `.env.local` file at the root of the repo.
 1. Add `REACT_APP_GITHUB_API_TOKEN=` to the first line in the file and paste in your access token after the `=`.
+1. Run `npm install`
 1. Run `npm start` and check out `localhost:3000`.
 
 If you want to run tests you can run `npm test`!
