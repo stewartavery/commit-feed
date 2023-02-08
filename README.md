@@ -1,6 +1,6 @@
 # commit-feed
 
-This project was created in response to a take home assignment. 
+This project was created in response to a take home assignment. It uses the Github API to display commits for a given author/repository combination. 
 
 ## How to Use
 
