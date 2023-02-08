@@ -1,6 +1,6 @@
 # commit-feed
 
-This project was created in response to a take home assignment from [Chronosphere](https://chronosphere.io/).
+This project was created in response to a take home assignment. 
 
 ## How to Use
 
